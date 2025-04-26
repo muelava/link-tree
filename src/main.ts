@@ -24,10 +24,11 @@ import {
   BiChatQuote,
   BiFacebook,
   BiTwitter,
-  BiTelegram
+  BiTelegram,
+  BiArrowRight
 } from 'oh-vue-icons/icons';
 
-addIcons(BiWhatsapp, CoGmail, BiInstagram, BiLinkedin, BiTiktok, BiYoutube, IoOpenOutline, CoHome, HiLogout, FaEdit, BiTrashFill, CoLink, BiChatQuote, BiFacebook, BiTwitter, BiTelegram);
+addIcons(BiWhatsapp, CoGmail, BiInstagram, BiLinkedin, BiTiktok, BiYoutube, IoOpenOutline, CoHome, HiLogout, FaEdit, BiTrashFill, CoLink, BiChatQuote, BiFacebook, BiTwitter, BiTelegram, BiArrowRight);
 
 const app = createApp(App);
 

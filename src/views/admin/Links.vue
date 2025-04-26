@@ -1,6 +1,6 @@
 <template>
     <AdminLayout>
-      <div class="sticky top-0 backdrop-blur-lg py-3 flex justify-between items-center w-full">
+      <div class="sticky top-0 backdrop-blur-lg h-20 flex justify-between items-center w-full">
         <h1 class="text-2xl font-semibold text-neutral-800 flex-auto">Your Link</h1>
         <div v-if="isDirty">
           <button @click="saveLinks" class="bg-emerald-500 mx-auto text-white text-sm py-2 px-5 rounded-full cursor-pointer hover:bg-emerald-600 transition-all duration-300">
@@ -54,8 +54,8 @@
       if (data) {
         linksData.value = data;
         originalLinksData.value = JSON.parse(JSON.stringify(data));
-        isLoad.value = false
       }
+      isLoad.value = false
     });
   });
   
@@ -81,7 +81,7 @@
   
     const updatedLinks = linksData.value.map(item => ({
       ...item,
-      avatar: './dm.svg',
+      avatar: './vite.svg',
     }));
   
     try {

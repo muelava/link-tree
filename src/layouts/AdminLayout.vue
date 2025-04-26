@@ -4,7 +4,7 @@
       <AdminSidebar/>
   
       <!-- Main Content -->
-      <main class="flex-1 bg-gray-50 p-6">
+      <main class="flex-1 bg-gray-50 px-6 pb-6 max-h-screen overflow-y-auto">
         <slot />
 
         <!-- footer bar -->
