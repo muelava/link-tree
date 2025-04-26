@@ -9,7 +9,7 @@
         <ul class="flex justify-center items-center gap-4 my-10">
           <li v-for="(item, index) in socmedData" :key="index">
             <a :href="item.link" target="_blank" rel="noopener noreferrer">
-              <v-icon :name="item.name" scale="1.5" class="hover:scale-110 hover:text-emerald-500 transition-all duration-300 cursor-pointer" />
+              <v-icon :name="item.name" scale="1.5" class="text-neutral-500 hover:scale-110 hover:text-emerald-500 transition-all duration-300 cursor-pointer" />
             </a>
           </li>
         </ul>
