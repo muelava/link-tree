@@ -1,0 +1,13 @@
+# Aktifkan mod_rewrite
+RewriteEngine On
+
+# Base URL kamu (ganti kalau bukan di /link-tree/)
+RewriteBase /link-tree/
+
+# Jika file atau folder ada, langsung tampilkan
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Jika tidak, redirect semuanya ke index.html
+RewriteRule ^ index.html [L]
