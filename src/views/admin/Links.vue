@@ -89,7 +89,8 @@
   
     const updatedLinks = linksData.value.map(item => ({
       ...item,
-      avatar: './vite.svg',
+      avatar: '',
+      // avatar: './vite.svg',
     }));
   
     try {
