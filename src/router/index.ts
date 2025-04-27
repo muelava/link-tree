@@ -42,7 +42,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory('/link-tree/'),
+  history: createWebHistory('/'), // previous: /link-tree/
   routes,
 });
 
