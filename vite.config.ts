@@ -5,8 +5,7 @@ import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
-  // base: '/link-tree',
+  base: '/', // previous: /link-tree
   plugins: [vue(), tailwindcss()],
   resolve:{
     alias:{

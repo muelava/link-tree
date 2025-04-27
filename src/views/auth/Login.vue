@@ -1,7 +1,7 @@
 <template>
     <main class="flex items-center h-screen p-4">
         <div class="max-w-sm mx-auto mt-20 space-y-4 bg-white shadow-2xl p-10 rounded-2xl">
-          <h1 class="text-2xl font-semibold text-center mb-10 text-neutral-700">Halo, silakan masuk!</h1>
+          <h1 class="text-2xl font-semibold text-center mb-10 text-neutral-700">Halo sayang, silakan masuk!</h1>
           <input
             v-model="email"
             type="email"
