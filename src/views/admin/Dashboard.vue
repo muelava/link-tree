@@ -10,7 +10,7 @@
       </div>
     </div>
     <br />
-    <UploadImage :current-image="profileData.avatar"/>
+    <UploadImage :current-image="profileData.avatar" :is-load="isLoad"/>
     <br>
     <form action="javascript:" method="POST" class="max-w-3xl mx-auto pb-10">
       <div class="grid grid-cols-1 flex-row m-3 py-3 px-2 bg-white shadow rounded-xl">
