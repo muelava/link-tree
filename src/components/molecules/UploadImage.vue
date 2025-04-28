@@ -32,8 +32,15 @@ const imageUrl = ref("");
 const hasChange = ref(false);
 
 const handleFileChange = (event) => {
-  file.value = event.target.files[0];
-  hasChange.value = true;
+  const selectedFile = event.target.files[0];
+  if (selectedFile) {
+    if (imageUrl.value) {
+      URL.revokeObjectURL(imageUrl.value);
+    }
+    file.value = selectedFile;
+    imageUrl.value = URL.createObjectURL(selectedFile);
+    hasChange.value = true;
+  }
 };
 
 // Upload image to Cloudinary
