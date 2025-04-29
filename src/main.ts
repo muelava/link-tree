@@ -25,10 +25,10 @@ import {
   BiFacebook,
   BiTwitter,
   BiTelegram,
-  BiArrowRight
+  OiGrabber
 } from 'oh-vue-icons/icons';
 
-addIcons(BiWhatsapp, CoGmail, BiInstagram, BiLinkedin, BiTiktok, BiYoutube, IoOpenOutline, CoHome, HiLogout, FaEdit, BiTrashFill, CoLink, BiChatQuote, BiFacebook, BiTwitter, BiTelegram, BiArrowRight);
+addIcons(BiWhatsapp, CoGmail, BiInstagram, BiLinkedin, BiTiktok, BiYoutube, IoOpenOutline, CoHome, HiLogout, FaEdit, BiTrashFill, CoLink, BiChatQuote, BiFacebook, BiTwitter, BiTelegram, OiGrabber);
 
 const app = createApp(App);
 
