@@ -10,8 +10,8 @@
       </div>
     </div>
     <br />
-    <UploadImage :current-image="profileData.avatar" :is-load="isLoad"/>
-    <br>
+    <UploadImage :current-image="profileData.avatar" :is-load="isLoad" />
+    <br />
     <form action="javascript:" method="POST" class="max-w-3xl mx-auto pb-10">
       <div class="grid grid-cols-1 flex-row m-3 py-3 px-2 bg-white shadow rounded-xl">
         <input v-if="!isLoad" type="text" v-model="profileData.username" placeholder="Username" class="border col-span-4 border-neutral-400 focus:border-emerald-600 text-sm px-4 rounded-xl w-full p-2 outline-0 bg-white mb-5" />
@@ -20,7 +20,6 @@
         <div v-if="isLoad" class="h-10 w-full bg-gray-200 animate-pulse rounded-2xl"></div>
       </div>
     </form>
-
   </AdminLayout>
 </template>
 
@@ -50,7 +49,7 @@ const originalProfileData = ref<{ avatar: string; username: string; title: strin
 });
 const isDirty = ref(false);
 const isLoading = ref(false);
-const isLoad = ref(true)
+const isLoad = ref(true);
 
 onMounted(() => {
   const dbRefProfile = dbRef(db, "profile");
@@ -61,7 +60,7 @@ onMounted(() => {
       profileData.value = data;
       originalProfileData.value = JSON.parse(JSON.stringify(data));
     }
-    isLoad.value = false
+    isLoad.value = false;
   });
 });
 
@@ -72,7 +71,6 @@ watch(
   },
   { deep: true }
 );
-
 
 // Save data into realtime database
 const saveProfile = async () => {
