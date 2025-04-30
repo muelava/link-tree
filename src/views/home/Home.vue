@@ -27,7 +27,7 @@
 
       
       <div v-if="!isLoad" class="px-4 md:px-0 space-y-4 mb-20">
-        <CustomButton v-for="(item, i) in linksData" :key="i" :text="item.text" :href="item.href" :avatar="profileData.avatar ? profileData.avatar : logo" />
+        <CustomButton v-for="(item, i) in linksData" :key="i" :text="item.text" :href="item.href" :img="item.img" :avatar="profileData.avatar ? profileData.avatar : logo" />
       </div>
       <SocialSekeleton v-if="isLoad" :count="5"/>
 
@@ -53,7 +53,7 @@ interface SocmedItem {
 }
 
 const socmedData = vueRef<{ name: string; link?: string; show: boolean }[]>([]);
-const linksData = vueRef<{ avatar?: string, text: string; href: string }[]>([]);
+const linksData = vueRef<{ avatar?: string, text: string; href: string; img?: string }[]>([]);
 const profileData = vueRef<{avatar:string; username:string; title:string}>({avatar:"", username:"", title:""});
 const isLoad = vueRef(true)
 
