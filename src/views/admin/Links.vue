@@ -17,7 +17,7 @@
         <template #item="{ element, index }">
           <div class="grid grid-cols-1 md:grid-cols-12 md:gap-3 flex-row m-3 py-3 px-2 bg-white shadow rounded-xl cursor-grab active:cursor-grabbing">
             <!-- Drag Handle -->
-            <div class="flex items-center justify-center md:col-span-1">
+            <div class="hidden md:flex items-center justify-center md:col-span-1">
               <v-icon name="oi-grabber" scale="1" class="drag-handle" />
             </div>
 
@@ -40,7 +40,7 @@
             <!-- Delete Button -->
             <button
               @click="deleteLink(index)"
-              class="flex items-center text-xs justify-center w-full rounded-xl text-rose-500 cursor-pointer bg-red-50 hover:bg-rose-100 transition-all duration-300 md:col-span-1"
+              class="flex items-center text-xs justify-center w-full rounded-xl text-rose-500 cursor-pointer py-2 md:py-0 mt-3 md:mt-0 bg-rose-50 hover:bg-rose-100 transition-all duration-300"
             >
               <v-icon name="bi-trash-fill" scale="0.8" />
             </button>
@@ -63,11 +63,11 @@
 <script setup lang="ts">
 import AdminLayout from "@/layouts/AdminLayout.vue";
 import LinksSekeleton from "@/components/molecules/LinksSekeleton.vue";
+import draggable from 'vuedraggable';
 import { ref as dbRef, onValue, set } from "firebase/database";
 import { db } from "@/firebase";
 import { ref, onMounted, watch } from "vue";
 import isEqual from "lodash/isEqual";
-import draggable from 'vuedraggable';
 import { useToast } from "vue-toastification";
 
 const toast = useToast();
@@ -115,7 +115,6 @@ const deleteLink = (index: number) => {
 const saveLinks = async () => {
   isLoading.value = true;
   try {
-    // Save tanpa ID, hanya text dan href ke database
     const payload = linksData.value.map(({ id, ...rest }) => rest);
 
     await set(dbRef(db, "links"), payload);
